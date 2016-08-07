@@ -24,12 +24,26 @@
 
 
 # Body
+def eval_loop():
+	while True:
+		try:
+			input_str = str(input("Enter a string to be evaluated: "))
+			if input_str == 'done':
+				break
+			#use last variable to store value of last expression evaluated
+			last = eval(input_str)
+			print(last)
+		except:
+			print("Couldn't evaluate")
+	return last
+
+
 
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+
+	eval_loop()
 
 if __name__ == '__main__':
     main()

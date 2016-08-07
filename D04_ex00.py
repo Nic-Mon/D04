@@ -11,10 +11,29 @@
 #         - then ends the program
 ################################################################################
 # Imports
-
+import random
 
 # Body
-
+def guess_num():
+	tries = 0
+	x = random.randint(1,25)
+	while tries < 5:
+		try:
+			guess = int(input('Guess the number from 1 to 25: '))
+			if(x == guess):
+				print("Correct!")
+				break
+			elif(guess < 1 or guess > 25):
+				print("Must be between 1 and 25")
+			elif(guess < x):
+				print("Too Low")
+			elif(guess > x):
+				print("Too High")
+		except:
+			print("Not an int!")
+		tries += 1
+	else:
+		print("Too many tries, the number was " + str(x))
 
 
 
@@ -22,7 +41,7 @@
 def main():
 
 
-    print("Hello World!") # Remove this and replace with your function calls
+    guess_num()
     
 
 if __name__ == '__main__':

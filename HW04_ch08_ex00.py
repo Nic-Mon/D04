@@ -20,14 +20,24 @@
 
 
 # Body
-
+def count(s, c):
+	count = 0
+	for letter in s:
+		if letter == c:
+			count += 1
+	print(count)
 
 ###############################################################################
 def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!")
+    count('mississippi', 'i')
+    count('sally sells sea shells at the sea shore', 's')
+    count('vroom vroom vroom', 'o')
+    count('holy guacamole', 'g')
+    count('antidisestablishmentarianism', 'a')
+    count('uc berkeley', 'e')
 
 
 if __name__ == '__main__':
